@@ -42,7 +42,7 @@ const AppContent = () => {
     <BrowserRouter basename="/Trading-App">
       <Routes>
         <Route 
-          path="/Trading-App/" 
+          path="/Trading-App/dashboard" 
           element={user ? <Navigate to="/Trading-App/dashboard" replace /> : <Index />} 
         />
         <Route 
