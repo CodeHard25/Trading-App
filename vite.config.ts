@@ -5,7 +5,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/Trading-App/dashboard/",
+  base: "/Trading-App/dist/assets/",
   server: {
     host: "::",
     port: 8080,
