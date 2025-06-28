@@ -42,15 +42,15 @@ const AppContent = () => {
     <BrowserRouter basename="/Trading-App">
       <Routes>
         <Route 
-          path="/" 
-          element={user ? <Navigate to="/dashboard" replace /> : <Index />} 
+          path="/Trading-App/" 
+          element={user ? <Navigate to="/Trading-App/dashboard" replace /> : <Index />} 
         />
         <Route 
-          path="/auth" 
-          element={user ? <Navigate to="/dashboard" replace /> : <AuthPage />} 
+          path="/Trading-App/auth" 
+          element={user ? <Navigate to="/Trading-App/dashboard" replace /> : <AuthPage />} 
         />
         <Route 
-          path="/dashboard" 
+          path="/Trading-App/dashboard" 
           element={
             <ProtectedRoute>
               <DashboardPage />
@@ -58,7 +58,7 @@ const AppContent = () => {
           } 
         />
         <Route 
-          path="/strategies" 
+          path="/Trading-App/strategies" 
           element={
             <ProtectedRoute>
               <StrategiesPage />
@@ -66,7 +66,7 @@ const AppContent = () => {
           } 
         />
         <Route 
-          path="/portfolio" 
+          path="/Trading-App/portfolio" 
           element={
             <ProtectedRoute>
               <PortfolioPage />
@@ -74,7 +74,7 @@ const AppContent = () => {
           } 
         />
         <Route 
-          path="/analytics" 
+          path="/Trading-App/analytics" 
           element={
             <ProtectedRoute>
               <AnalyticsPage />
@@ -82,7 +82,7 @@ const AppContent = () => {
           } 
         />
         <Route 
-          path="/risk-management" 
+          path="/Trading-App/risk-management" 
           element={
             <ProtectedRoute>
               <RiskManagementPage />
@@ -90,7 +90,7 @@ const AppContent = () => {
           } 
         />
         <Route 
-          path="/settings" 
+          path="/Trading-App/settings" 
           element={
             <ProtectedRoute>
               <SettingsPage />
