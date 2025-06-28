@@ -24,7 +24,7 @@ const AuthPage = () => {
   // Redirect if already authenticated
   useEffect(() => {
     if (user) {
-      navigate('/dashboard');
+      navigate('Trading-App/dashboard');
     }
   }, [user, navigate]);
 
@@ -42,7 +42,7 @@ const AuthPage = () => {
         });
         // Clear the hash and redirect to sign in
         window.location.hash = '';
-        navigate('/auth');
+        navigate('Trading-App/auth');
       }
     };
     
@@ -55,7 +55,7 @@ const AuthPage = () => {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: `${window.location.origin}/dashboard`
+          redirectTo: `${window.location.origin}/Trading-App/dashboard`
         }
       });
       
@@ -94,7 +94,7 @@ const AuthPage = () => {
           title: "Welcome back!",
           description: "You have successfully signed in.",
         });
-        navigate('/dashboard');
+        navigate('Trading-App/dashboard');
       }
     } catch (error) {
       toast({
